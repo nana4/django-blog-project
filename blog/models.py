@@ -13,8 +13,8 @@ class post(models.Model):
 class comment(models.Model):
     body = models.TextField()
     author = models.CharField(max_length=60)
-    created = models.DateField(auto_now = True)
-    updated = models.DateField(auto_now = True)
+    created = models.DateField()
+    updated = models.DateField()
     post = models.ForeignKey(post, related_name='comments')
 
     def __unicode__(self):
@@ -40,7 +40,7 @@ class PostAdmin(admin.ModelAdmin):
 class CommentAdmin(admin.ModelAdmin):
 	list_display = ('post', 'author', 'first_sixty', 'created', 'updated')
 	list_filter = ('created', 'author' )
-	inlines = [CommentInline]
+	#inlines = [CommentInline]
 
 	
     
