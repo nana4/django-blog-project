@@ -8,7 +8,7 @@ class post(models.Model):
     updated = models.DateField(auto_now = True)
 
     def __unicode__(self):
-        return self.title
+        return self.body
 
 class comment(models.Model):
     body = models.TextField()

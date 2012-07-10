@@ -23,8 +23,10 @@ def post_detail(request, id, showComments=False):
     
 def post_search(request, term):
     result = post.objects.filter(body__contains=term)
-    #searcher = (r'.*', result.created)
-    return HttpResponse(result)
+    res = ''
+    for i in result:
+        res +='<ul><li><em>'+str(i)+'</em></li></ul>'+'<br />'
+    return HttpResponse(res)
     
     
 
