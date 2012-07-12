@@ -1,0 +1,6 @@
+{%extends "blog/base.html" %}
+{% block content %}
+{% for p_ost in posts %}
+<ul><li>POST :<a href = "/blog/posts/{{p_ost.id}}">{{p_ost}}</a></li></ul>
+{%endfor%}
+{% endblock %}
