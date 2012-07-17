@@ -1,12 +1,13 @@
 {%extends "blog/base.html" %}
 {% block content %}
+
+<h5 style = "left:0px; color:blue; float:left;">POSTS</h5>
 {%for post in posts %}
-	<h5>POSTS</h5>
+	<div class = "post_list">
 	<a href = "/blog/posts/{{post.id}}/true"><h3>{{post.title}}</h3></a>
-	<ul>
 	  <p>Created : {{post.created}}</p>
 	  <p>Last Updated : {{post.updated}}</p>
 	  <p>POST(first 60) : {{post.first_60}}</p><!--what is enhancing these calls?-->
-	</ul>
+	</div>
 {% endfor%}
 {% endblock %}

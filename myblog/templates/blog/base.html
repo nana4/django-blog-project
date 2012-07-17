@@ -1,28 +1,37 @@
 <html>
 	
 	<head>
+		<link rel="stylesheet" href="/static/bootstrap/css/bootstrap.css"/>
+		<!--<link rel = "stylesheet" href="/static/bootstrap/css/style.css"/>	-->
 		<title>Alex Blog</title>
-		<style type = "text/css">
-			*{color:black; font-weight:2px;}
-			a{text-decoration:none; color:#fa5667;}
-			li{list-style-type:none:}
-			#container{width:1000px; height:1000px;}
-			#main_page{background-color:white}
-		
-		</style>
 	</head>
 	<body>
-	<div id="container">
-	  <div id = "main_page">
+	
 	   
 	   <div id = "content" >
+	    <div class = top_banner>
+		  
+		 <!-- <a href = "/blog/posts"><h5>HI WELCOME TO MY BLOG</h5></a>-->
+		</div>
+		<div class = "navigation_container">
+		 <a href = "/blog/"><div class = "navig_divs" >Home</div></a>
+		 
+		 <!--<div class = "navig_divs"><a href = "/blog/comments">Comments</a></div>
+		 <div class = "navig_divs"><a href = "/reg/login">Login</a></div>
+		 <div class = "navig_divs"><a href = "/reg/do_logout">Logout</a></div>-->
+		</div>
+		
 
-		{%block content %}
-		  <a href = "/blog/posts">alex_title</a>
-		{% endblock %}
-	   </div>
-	  </div>	
-	</div>
+	     {%block content %}
+		<h5 style = color:#0099CC;>HI WELCOME TO MY BLOG</h5>
+<a href = "/blog/posts"><div class = "navig_divs" >View Posts</div></a>
+	          <!-- <form class="well form-search">
+                   <input type="text" class="input-medium search-query">
+                   <button type="submit" class="btn">Search</button>
+                  </form>-->
+		
+	     {% endblock %}
+		
+	   </div> 
 	</body
-
 </html>

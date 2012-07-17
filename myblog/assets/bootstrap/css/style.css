@@ -1,0 +1,11 @@
+/***
+****
+these are the css styles that are going to be used for the templates
+****
+****/
+.base_banner
+{
+width:70%;
+height:30px;
+background-color:yellow;
+}
